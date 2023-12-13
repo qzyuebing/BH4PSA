@@ -1,0 +1,9 @@
+
+config udpxy
+	option max_clients '60'
+	option disabled '0'
+	option bind 'wwan'
+	option port '4023'
+	option source 'IPTV'
+	option status '1'
+
