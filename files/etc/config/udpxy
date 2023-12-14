@@ -1,0 +1,9 @@
+
+config udpxy
+	option disabled '0'
+	option bind 'wwan'
+	option port '4023'
+	option source '10.94.142.98'
+	option max_clients '20'
+	option respawn '1'
+
