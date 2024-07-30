@@ -20,15 +20,9 @@ config timeserver 'ntp'
 
 config led
 	option name 'wan'
-	option sysfs 'blue:status'
 	option trigger 'netdev'
 	option dev 'wan'
-	list mode 'link'
 	list mode 'tx'
 	list mode 'rx'
-
-config led
-	option name '4G'
 	option sysfs 'red:status'
-	option trigger 'netdev'
 
