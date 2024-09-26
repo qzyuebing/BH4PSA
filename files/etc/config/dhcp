@@ -27,7 +27,7 @@ config dhcp 'lan'
 	option interface 'lan'
 	option start '2'
 	option leasetime '1h'
-	option limit '30'
+	option limit '100'
 	list ra_flags 'none'
 
 config dhcp 'wan'
@@ -49,4 +49,9 @@ config host
 	option dns '1'
 	option mac 'E8:DB:84:F8:A3:71'
 	option ip '192.168.8.21'
+
+config host
+	option name 'debian'
+	option ip '192.168.8.6'
+	option mac '00:0C:29:D6:26:79'
 
