@@ -37,3 +37,9 @@ config interface 'IPTV'
 	option device 'lan2'
 	option hostname '*'
 
+config device
+	option name 'lan2'
+	option mtu '1500'
+	option macaddr '20:76:93:3D:F7:1D'
+	option igmpversion '2'
+
