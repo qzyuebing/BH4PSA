@@ -1,7 +1,17 @@
 
 config service 'pptpd'
 	option mppe '1'
-	option enabled '0'
 	option localip '192.168.0.1'
 	option remoteip '192.168.0.100-120'
+	option enabled '1'
+
+config users
+	option enabled '1'
+	option username 'BH4PSA'
+	option password 'yt985200.'
+
+config users
+	option enabled '1'
+	option username 'BI4PCS'
+	option password '696544'
 
