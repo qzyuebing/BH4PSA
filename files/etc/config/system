@@ -32,3 +32,11 @@ config led
 	option dev 'wan'
 	option name 'wan'
 
+config led
+	option name 'IPTV'
+	option sysfs 'red:status'
+	option trigger 'netdev'
+	option dev 'lan2'
+	list mode 'tx'
+	list mode 'rx'
+
