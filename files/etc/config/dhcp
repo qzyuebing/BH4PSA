@@ -40,3 +40,14 @@ config odhcpd 'odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
 	option loglevel '4'
 
+config host
+	option mac '20:76:93:3D:85:AB'
+	option name 'IPTV'
+	option dns '1'
+	option ip '192.168.0.10'
+
+config host
+	option name 'BH4PSA-NAS'
+	option mac '00:11:32:11:22:33'
+	option ip '192.168.0.15'
+

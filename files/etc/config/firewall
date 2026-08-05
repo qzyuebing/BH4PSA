@@ -179,8 +179,8 @@ config redirect
 	option name '电台监控'
 	option src 'wan'
 	option src_dport '8882'
-	option dest_ip '192.168.0.1'
 	option dest_port '8882'
+	option dest_ip '192.168.0.10'
 
 config redirect
 	option dest 'lan'
@@ -188,17 +188,8 @@ config redirect
 	option name 'IPTV'
 	option src 'wan'
 	option src_dport '4023'
-	option dest_ip '192.168.0.1'
 	option dest_port '4023'
-
-config redirect
-	option dest 'lan'
-	option target 'DNAT'
-	option name '全部端口'
-	option src 'wan'
-	option src_dport '1-65535'
-	option dest_ip '192.168.0.1'
-	option dest_port '1-65535'
+	option dest_ip '192.168.0.10'
 
 config include 'luci_app_pptp_server'
 	option type 'script'
@@ -214,4 +205,22 @@ config include 'passwall_server'
 	option type 'script'
 	option path '/var/etc/passwall_server.include'
 	option reload '1'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name 'IPTV_WEB'
+	option src 'wan'
+	option src_dport '8881'
+	option dest_ip '192.168.0.10'
+	option dest_port '8881'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name '群辉'
+	option src 'wan'
+	option src_dport '5000-9000'
+	option dest_port '5000-9000'
+	option dest_ip '192.168.0.15'
 

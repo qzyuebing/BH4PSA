@@ -33,10 +33,20 @@ config led
 	option name 'wan'
 
 config led
-	option name 'IPTV'
-	option sysfs 'red:status'
 	option trigger 'netdev'
-	option dev 'lan2'
+	list mode 'link'
 	list mode 'tx'
 	list mode 'rx'
+	option name 'IPTV路由口'
+	option sysfs 'green:status'
+	option dev 'pppoe-wan'
+
+config led
+	option trigger 'netdev'
+	option dev 'wan'
+	option name 'wan口'
+	list mode 'link'
+	list mode 'tx'
+	list mode 'rx'
+	option sysfs 'red:status'
 
